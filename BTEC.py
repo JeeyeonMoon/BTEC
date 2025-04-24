@@ -32,7 +32,7 @@ class TravelExpenseCalculator:
 
         if trip_type == "근거리":
             meal_cost = self.domestic_rates["식비_근거리"][employee_type] * days
-            travel_cost = distance_km * self.nearby_rate_per_km * days
+            travel_cost = distance_km * self.nearby_rate_per_km * 2 * days
             if car_type == "전기차":
                 travel_cost *= 0.7
         else:
